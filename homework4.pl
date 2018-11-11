@@ -1,9 +1,20 @@
 #!/usr/bin/perl
 
-@col = ();
+$i = 0;
 
-$a = <STDIN>;
+chomp( $line = <STDIN> );
+while ( $line ) {
 
-@col = split(" ", $a);
+	@col = split " ", $line;
 
-print "Test";
+	push @commands, "$col[0]\t$col[9]\n";
+	
+#	print $commands[ $i ];
+	$i = $i + 1;
+	chomp( $line = <STDIN> );
+
+}
+
+foreach $x ( sort @commands ){
+	print $x;
+}

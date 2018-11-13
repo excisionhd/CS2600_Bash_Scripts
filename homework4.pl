@@ -7,7 +7,7 @@ while ( $line ) {
 
 	@col = split " ", $line;
 
-	push @commands, "$col[0]\t$col[9]\n";
+	push @commands, "$col[6]\t$col[10]\n";
 	
 #	print $commands[ $i ];
 	$i = $i + 1;

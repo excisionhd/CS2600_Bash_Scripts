@@ -4,8 +4,12 @@ $i = 0;
 
 chomp( $line = <STDIN> );
 while ( $line ) {
+
 	@col = split " ", $line;
-	push @commands, "$col[6]\t$col[10]\n";
+	$com = $col[10];
+	$com = substr $com, 0, 59;
+
+	push @commands, "$col[6]\t$com\n";
 	
 	$i = $i + 1;
 	chomp( $line = <STDIN> );

@@ -7,7 +7,7 @@ while ( $line ) {
 
 	@col = split " ", $line;
 	$com = $col[10];
-	$com = substr $com, 0, 59;
+	$com = substr $com, 0, 60;
 
 	push @commands, "$col[6]\t$com\n";
 	

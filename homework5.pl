@@ -10,7 +10,7 @@ foreach $x( @doc){
 		@breaktag = split /</, $x;
 		$channel = substr $breaktag[1], 2, 6;
 		if ( $x =~ /;/ ){
-			$channel = (split /;/, $x)[1];
+			$show2[1] = (split /;/, $x)[1];
 		}
 		print $channel . " " . $show2[1] . "\n";				
 	}
